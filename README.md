@@ -1,5 +1,9 @@
-# simulate-recover
 The purpose of the simulate-and-recover procedure was to assess the accuracy of the EZ Diffusion Model's estimation of its three main parameters: boundary separation (α), drift rate (v) and non-decision time (τ). The primary objective of this procedure was to see whether squared error (variability in estimates), or bias (the gap between true and estimated values), decreased with increasing sample size, indicating more accurate estimations. The findings are consistent with the statistical behavior as expected: squared errors and bias decreases as N increases. This pattern shows that the more data that is available, the more accurate the EZ Diffusion model can recover parameters. Bias decreases as sample size (N) increases because more data points enable more precise parameter estimation, which results in a more stable and impartial portrayal of the underlying decision-making process. 
+
+Here are the predictions when sample size (N) equals 10, 40, and 4000:
+  - N = 10 is a small sample, and the EZ Diffusion model predicts that there will be lots of bias because of high variability due to noise, and some outliers will be more likely to skew parameter estimates.
+  - N = 40 is a medium sample. Although the EZ Diffusion model predicts reduced bias an better parameter estimation, there is still some variability due to noise.
+  - N = 4000 is an ideal sample size for the EZ Diffusion model because the model can accurately estimate parameters and the sample has less bias due to noise being averaged out. This leads to the EZ Diffusion model successfully demonstrating the fundamental decision making process.
 
 Even though the code for the EZ Diffusion Model ran successfully, the code for the test cases failed to run. To combat this in the future, more thorough edge case testing, such as testing with extremely short time steps or extreme sample sizes, can be added to the test case file to make sure the model handles all tests successfully. Additionally, checking for accurate outputs and handling errors would further cover the bases by making sure that the codes handles unexpected behavior or incorrect input.
 
